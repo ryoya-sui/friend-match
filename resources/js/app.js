@@ -1,3 +1,6 @@
 require('./bootstrap');
 require('./users');
-require("./fontawesome");
+require('./jquery.jTinder'); 
+require('./jquery.transform2d'); 
+require('./jTinder');
+
