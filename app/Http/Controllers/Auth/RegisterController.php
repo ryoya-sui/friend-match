@@ -67,7 +67,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if (!is_null($data['img_name'])) {
+        if ($data && array_key_exists('img_name', $data)) {
             $img_file = $data['img_name'];
             $extension = $img_file->extension();
             $img_name = uniqid(mt_rand()) . '.' . $extension;
