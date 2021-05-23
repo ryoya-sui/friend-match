@@ -27,7 +27,7 @@ class ReactionController extends Controller
         $checkReaction = Reaction::where([
             ['to_user_id', $to_user_id],
             ['from_user_id', $from_user_id]
-        e)->get();
+        ])->get();
 
         if ($checkReaction->isEmpty()) {
 
