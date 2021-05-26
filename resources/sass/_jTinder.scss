@@ -108,7 +108,7 @@ html, body {
 /* Like & dislike badge images */
 #tinderslide .like,
 #tinderslide .dislike {
-    background: url('/images/liked.png') no-repeat scroll 0 0;
+    background: url('https://koa-aiken.com/matching/friend-match/public/images/liked.png') no-repeat scroll 0 0;
     opacity: 0;
     height: 80px;
     position: absolute;
@@ -129,7 +129,7 @@ html, body {
 #tinderslide .dislike {
     right: 45px;
     left: auto;
-    background: url("/images/nope.png") no-repeat scroll 0 0;
+    background: url('https://koa-aiken.com/matching/friend-match/public/images/nope.png') no-repeat scroll 0 0;
 }
 
 /* Image container */

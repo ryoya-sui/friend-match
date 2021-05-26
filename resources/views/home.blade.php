@@ -7,7 +7,7 @@
     <ul>
       <li class="personIcon">
         <a href="{{ route('users.show') }}"><i class="fas fa-user fa-2x"></i></a></li>
-      <li class="appIcon"><a href="{{ route('home') }}"><img src="/images/techpit-match-icon.png"></a></li>
+      <li class="appIcon"><a href="{{ route('home') }}"><img src="{{ asset('images/techpit-match-icon.png') }}"></a></li>
     </ul>
   </nav>
   <div id="tinderslide">

@@ -7,7 +7,7 @@ var postReaction = function (to_user_id, reaction) {
   });
   $.ajax({
     type: "POST",
-    url: "/api/like",
+    url: "https://koa-aiken.com/matching/friend-match/public/api/like",
     data: {
       to_user_id: to_user_id,
       from_user_id: from_user_id,

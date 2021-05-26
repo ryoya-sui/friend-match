@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::post('/like', 'ReactionController@create');
+Route::post('/like', 'ReactionController@create')->name('reaction');
