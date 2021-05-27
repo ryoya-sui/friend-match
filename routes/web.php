@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//ユーザー情報
 Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
     Route::get('show', 'UserController@show')->name('users.show');
     Route::get('edit', 'UserController@edit')->name('users.edit');
@@ -22,4 +24,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); //ホーム画面
+Route::get('/matching', 'MatchingController@index')->name('matching');
