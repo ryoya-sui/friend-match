@@ -18,11 +18,21 @@ Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
     Route::post('update', 'UserController@update')->name('users.update');
 });
 
+//チャット処理
+Route::group(['prefix' => 'chat', 'middleware' => 'auth'], function () {
+    Route::post('show', 'ChatController@show')->name('chat.show');
+    Route::post('chat', 'ChatController@chat')->name('chat.chat');
+});
+
+//ホーム画面
+Route::get('/home', 'HomeController@index')->name('home');
+
+//マッチング処理
+Route::get('/matching', 'MatchingController@index')->name('matching');
+
 Route::get('/', function () {
     return view('top');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home'); //ホーム画面
-Route::get('/matching', 'MatchingController@index')->name('matching');
