@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 //ユーザー情報
 Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
@@ -34,5 +35,9 @@ Route::get('/', function () {
     return view('top');
 });
 
-Auth::routes();
 
+//Twitterログイン
+Route::group(['prefix' => 'twitter', 'middleware' => 'guest'], function () {
+    Route::get('login', 'Auth\TwitterController@redirectToProvider')->name('twitter.login');
+    Route::get('login/callback', 'Auth\TwitterController@handleProviderCallback')->name('twitter.callback');
+});

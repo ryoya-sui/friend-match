@@ -72,7 +72,7 @@ class RegisterController extends Controller
             $extension = $img_file->extension();
             $img_name = uniqid(mt_rand()) . '.' . $extension;
             $img = Image::make($img_file->getRealPath());
-            $img->resize(400,400)->save(storage_path() . '/app/public/images/' . $img_name);
+            $img->resize(400, 400)->save(storage_path() . '/app/public/images/' . $img_name);
         } else {
             $img_name = '';
         }
