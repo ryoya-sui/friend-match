@@ -7,6 +7,7 @@
     <h1 class="h3 loginPage_contents_title">一緒に勉強する仲間を見つけよう</h1>
     <div class="btn loginPage_contents_btn"><a class="text-white" href="{{ route('login') }}">メールアドレスでログインする</a></div>
     <a href="{{ route('twitter.login') }}">twitterログイン</a>
+    <a href="{{ route('facebook.login') }}">facebookログイン</a>
     </div>
   </div>
 </div>

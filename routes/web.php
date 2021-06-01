@@ -41,3 +41,9 @@ Route::group(['prefix' => 'twitter', 'middleware' => 'guest'], function () {
     Route::get('login', 'Auth\TwitterController@redirectToProvider')->name('twitter.login');
     Route::get('login/callback', 'Auth\TwitterController@handleProviderCallback')->name('twitter.callback');
 });
+
+//Facebookログイン
+Route::group(['prefix' => 'facebook', 'middleware' => 'guest'], function () {
+    Route::get('login', 'Auth\FacebookController@redirectToProvider')->name('facebook.login');
+    Route::get('login/callback', 'Auth\FacebookController@handleProviderCallback')->name('facebook.callback');
+});
