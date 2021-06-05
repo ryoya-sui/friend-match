@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="topPage">
-  <nav class="nav">
+  <div class="nav">
     <ul>
       <li class="personIcon">
         <a href="{{ route('users.show') }}"><i class="fas fa-user fa-2x"></i></a></li>
-      <li class="appIcon"><a href="{{ route('home') }}"><img src="{{ asset('images/techpit-match-icon.png') }}"></a></li>
+      <li class="appIcon"><a href="{{ route('home') }}"><img src="{{ asset('images/friend-match.png') }}"></a></li>
       <li class="messageIcon"><a href="{{ route('matching') }}"><i class="fas fa-2x fa-comments"></a></i></li>
     </ul>
-  </nav>
+  </div>
   <div id="tinderslide">
     <ul>
         @foreach($users as $user)

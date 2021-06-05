@@ -1,4 +1,4 @@
-$main-color: #fd5068;
+$main-color: #FFA500;
 $main-text-color: #fff;
 
 body {
@@ -13,16 +13,16 @@ body {
 .signupPage {
   .header {
     padding: 20px;
+    font-size: 40px;
     text-align: center;
-    background: $main-color;
-    color: $main-text-color;
+    color: #FF0000;
   }
   .userProfileImg {
     position: relative;
     margin: 0 auto 10px auto;
     width: 100px;
     height: 100px;
-    background: #f85a6f;
+    background: #FFA500;
     display: flex;
     cursor: pointer;
     align-items: center;

@@ -17086,6 +17086,11 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.loginPage {
+  background-image: url("https://koa-aiken.com/matching/friend-match/public/images/friend-match.png");
+  background-size: cover;
+}
+
 .loginPage .nav {
   background-color: #fff;
 }
@@ -17100,6 +17105,7 @@ readers do not read off random characters that represent icons */
 
 .loginPage_contents_title {
   margin-top: 12vh;
+  font-size: 40px;
 }
 
 .loginPage_contents_btn {
@@ -17149,9 +17155,9 @@ body {
 
 .signupPage .header {
   padding: 20px;
+  font-size: 40px;
   text-align: center;
-  background: #fd5068;
-  color: #fff;
+  color: #FF0000;
 }
 
 .signupPage .userProfileImg {
@@ -17159,7 +17165,7 @@ body {
   margin: 0 auto 10px auto;
   width: 100px;
   height: 100px;
-  background: #f85a6f;
+  background: #FFA500;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -17216,7 +17222,7 @@ body {
 }
 
 .signupPage .submitBtn {
-  background: #fd5068;
+  background: #FFA500;
   color: #fff;
   width: 200px;
   padding: 10px;
@@ -17256,7 +17262,7 @@ body {
   height: 120px;
   border-radius: 50%;
   margin: 0 auto;
-  background: #fd5068;
+  background: #FFA500;
   color: #fff;
   display: flex;
   align-items: center;
@@ -17267,7 +17273,7 @@ body {
   padding: 12px;
   width: 200px;
   border-radius: 21px;
-  background: #fd5068;
+  background: #FFA500;
   color: #fff;
   text-align: center;
   border: none;
@@ -17617,7 +17623,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  color: #fd5068;
+  color: #C0C0C0;
   border-bottom: 1px solid #e8e8e8;
 }
 
@@ -17680,7 +17686,7 @@ body {
 .matchingPage .matchingList .matchingPerson form .chatForm_btn {
   border: none;
   padding: 10px;
-  background: #fd5068;
+  background: #008000;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
@@ -17834,11 +17840,11 @@ body {
 }
 
 nav {
-  background-color: #55C501;
+  background-color: #FFA500;
 }
 
 nav #Navber .navbar-nav .nav-item #post-link {
-  background-color: #367E00;
+  background-color: #EF454A;
   border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;

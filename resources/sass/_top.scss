@@ -1,4 +1,6 @@
 .loginPage {
+   background-image: url("https://koa-aiken.com/matching/friend-match/public/images/friend-match.png");
+   background-size:  cover;
   .nav {
    background-color: #fff;
   }
@@ -10,6 +12,7 @@
     text-align: center;
     &_title {
       margin-top: 12vh;
+      font-size: 40px;
     }
     &_btn {
       display: block;
