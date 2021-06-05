@@ -1,4 +1,7 @@
 .loginPage {
+  .nav {
+   background-color: #fff;
+  }
   &_contents {
     height: 80vh;
     display: flex;
@@ -10,14 +13,35 @@
     }
     &_btn {
       display: block;
+      margin-bottom: 10px;
       max-width: 400px;
       padding: 20px;
-      margin: 0 auto;
       border-radius: 30px;
       background: #fd5068;
       color: #fff;
     }
+    &_twitter_btn {
+      display: block;
+      margin-bottom: 10px;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 30px;
+      background: #00aced;
+      color: #fff;
+    }
+    &_facebook_btn {
+      display: block;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 30px;
+      background: #305097; 
+      color: #fff;
+    }
+  }
+  .btn {
+      display: block;
+      max-width: 400px;
+      text-align: center;
+      margin: 0 auto;
   }
 }
-
-

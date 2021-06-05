@@ -17086,6 +17086,10 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.loginPage .nav {
+  background-color: #fff;
+}
+
 .loginPage_contents {
   height: 80vh;
   display: flex;
@@ -17100,12 +17104,38 @@ readers do not read off random characters that represent icons */
 
 .loginPage_contents_btn {
   display: block;
+  margin-bottom: 10px;
   max-width: 400px;
   padding: 20px;
-  margin: 0 auto;
   border-radius: 30px;
   background: #fd5068;
   color: #fff;
+}
+
+.loginPage_contents_twitter_btn {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 30px;
+  background: #00aced;
+  color: #fff;
+}
+
+.loginPage_contents_facebook_btn {
+  display: block;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 30px;
+  background: #305097;
+  color: #fff;
+}
+
+.loginPage .btn {
+  display: block;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 body {
@@ -17785,5 +17815,32 @@ body {
 .chatPage .messageInputForm_input {
   width: 100%;
   border: none;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "\30E1\30A4\30EA\30AA", meiryo, sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  background-color: #55C501;
+}
+
+nav #Navber .navbar-nav .nav-item #post-link {
+  background-color: #367E00;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 

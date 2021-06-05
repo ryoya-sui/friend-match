@@ -16,6 +16,7 @@
 </head>
 <body>
 
+    @include('parts.header')
     @yield('content')
 
     <!-- Scripts -->
