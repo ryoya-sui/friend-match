@@ -18003,3 +18003,57 @@ nav #Navber .navbar-nav .nav-item #post-link {
   display: block;
 }
 
+.top-wrapper {
+  background-color: #F6F6F6;
+  padding: 40px 0px;
+  height: 100vh;
+}
+
+.top-wrapper .post-search-form {
+  margin: auto;
+  padding-left: 0px;
+  padding: 20px 0;
+}
+
+.top-wrapper .posts-wrapper {
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.top-wrapper .posts-wrapper .post-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: solid 3px #F6F6F6;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-left > a {
+  display: block;
+  width: 40px;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-left > a > img {
+  width: 100%;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-right {
+  padding-left: 20px;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-right .post-title {
+  font-weight: bold;
+}
+
+.top-wrapper .posts-wrapper .post-box .post-box-right .post-date {
+  color: gray;
+}
+

@@ -4,7 +4,7 @@
     <ul class="navbar-nav">
       @auth
       <li class="nav-item ml-2">
-        <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ホーム</a>
+        <a href="{{ route('home') }}" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ホーム</a>
       </li>
       @endauth
     </ul>
@@ -20,15 +20,12 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ route('users.show') }}">マイページ</a>
-          <a class="dropdown-item" href="#">投稿一覧</a>
+          <a class="dropdown-item" href="{{ route('home') }}">マッチング</a>
+          <a class="dropdown-item" href="{{ route('matching') }}">チャットする</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">下書き一覧</a>
-          <a class="dropdown-item" href="#">編集リクエスト一覧</a>
+          <a class="dropdown-item" href="{{ route('post.form') }}">投稿</a>
+          <a class="dropdown-item" href="{{ route('post.index') }}">投稿一覧</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">設定</a>
-          <a class="dropdown-item" href="#">ヘルプ</a>
-          <div class="dropdown-divider"></div>
-
           <a class="dropdown-item" href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">

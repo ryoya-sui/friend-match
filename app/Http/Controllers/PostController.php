@@ -10,6 +10,21 @@ use App\Post;
 class PostController extends Controller
 {
 
+    //投稿記事一覧
+    public function index(Request $request)
+    {
+        $key = $request->key;
+
+        $query = Post::query();
+        
+        if (!empty($key)) {
+            $query->where('title', 'like', '%' . $key . '%')->orWhere('body', 'like', '%' . $key . '%');
+        }
+
+        $posts = $query->orderBy('created_at', 'desc')->get();
+        return view('posts.index', compact('posts'));
+    }
+
     //記事投稿用のフォーム
     public function form()
     {
