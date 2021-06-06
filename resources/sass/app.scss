@@ -14,12 +14,14 @@ $fa-font-path: "../webfonts";
 @import '~@fortawesome/fontawesome-free/scss/regular'; 
 @import '~@fortawesome/fontawesome-free/scss/brands'; 
 
-@import "top";
-@import "sign_up";
-@import "sign_in";
-@import "show"; 
-@import "edit";
-@import "jTinder"; 
-@import "matching";
-@import "chat"; 
-@import "header"; 
+@import "top"; //トップページ
+@import "sign_up"; //新規登録
+@import "sign_in"; //ログイン
+@import "show"; //マイページ
+@import "edit"; //マイページ編集
+@import "jTinder"; //ホーム
+@import "matching"; //マッチングリスト
+@import "chat"; //チャットページ
+@import "header"; //ヘッダー
+@import "post_form"; //投稿フォーム
+@import "post_details"; //投稿詳細 

@@ -12,7 +12,7 @@
     <ul class="navbar-nav ml-auto mr-5">
       @auth
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="#">投稿する</a>
+        <a class="nav-link text-white" id="post-link" href="{{ route('post.form') }}">投稿する</a>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
