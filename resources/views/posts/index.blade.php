@@ -12,7 +12,13 @@
     <div class="posts-wrapper col-md-6">
         @foreach ($posts as $post)
         <div class="post-box">
-            <div class="post-box-left"><a href="#"><img src="{{ asset('images/friend-match.png') }}"></a></div>
+            <div class="post-box-left">
+            @if ($post->user->img_name)
+                <a href="#"><img src="{{ asset('storage/images/' . $post->user->img_name) }}"></a>
+            @else
+                <a href="#"><img src="{{ asset('images/friend-match.png') }}"></a>
+            @endif
+            </div>
             <div class="post-box-right">
                 <a class="post-title" href="{{ route('post.details', ['id' => $post->id]) }}">{{ $post->title }}</a>
                 <div class="post-details">
