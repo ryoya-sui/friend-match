@@ -48,7 +48,7 @@ class PostController extends Controller
             'body' => $request->body
         ]);
 
-        $msg = "ナイス!!どんどんアプトプットしていこう!";
+        $msg = "投稿しました。どんどんアウトプットしましょう";
         return redirect()->route('post.details', ['id' => $post->id])->with('flash_message', $msg);
     }
 

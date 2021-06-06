@@ -77,6 +77,8 @@ class RegisterController extends Controller
             $img_name = '';
         }
 
+        session()->flash('flash_message', '登録ありがとうございます。一緒に勉強する仲間を見つけて勉強を継続して行きましょう!!');
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

@@ -19,15 +19,12 @@
 <body>
 
     @include('parts.header')
+     @if (session('flash_message'))
+        <div class="flash_message bg-success text-center py-3 my-0 text-white">
+            {{ session('flash_message') }}
+        </div>
+    @endif
     @yield('content')
-    <script>
-        @if (session('flash_message'))
-            $(function () {
-                    toastr.success('{{ session('flash_message') }}');
-            });
-        @endif
-    </script>
-
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
