@@ -36,8 +36,8 @@ class PostController extends Controller
     {
         $tags = explode(' ', $request->tags);
         $tag1 = $tags[0];
-        $tag2 = (isset($tags[1])) ?: null;
-        $tag3 = (isset($tags[2])) ?: null;
+        $tag2 = (isset($tags[1])) ? $tags[1] : null;
+        $tag3 = (isset($tags[2])) ? $tags[2] : null;
 
         $post = Post::create([
             'user_id' => Auth::id(),
@@ -48,7 +48,8 @@ class PostController extends Controller
             'body' => $request->body
         ]);
 
-        return redirect()->route('post.details', ['id' => $post->id]);
+        $msg = "ナイス!!どんどんアプトプットしていこう!";
+        return redirect()->route('post.details', ['id' => $post->id])->with('flash_message', $msg);
     }
 
     //投稿詳細
