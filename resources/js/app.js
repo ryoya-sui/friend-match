@@ -5,4 +5,5 @@ require('./jquery.transform2d');
 require('./jTinder');
 require('./chat');
 require('./markdown');
+require('./flash.js');
 
