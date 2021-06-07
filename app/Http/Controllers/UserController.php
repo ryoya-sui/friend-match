@@ -7,14 +7,25 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserInfoRequest;
 use App\User;
+use App\Post;
 
 class UserController extends Controller
 {
+
     //プロフィール画面
-    public function show()
+    public function show(Request $request)
     {
+        $key = $request->key;
+
+        $query = Post::query();
+        
+        if (!empty($key)) {
+            $query->where('title', 'like', '%' . $key . '%')->orWhere('body', 'like', '%' . $key . '%');
+        }
+
+        $posts = $query->orderBy('created_at', 'desc')->where('user_id', Auth::id())->get();
         $user = User::findOrFail(Auth::id());
-        return view('users.show', compact('user'));
+        return view('users.show', compact('user', 'posts'));
     }
 
     //プロフィール変更画面
@@ -55,5 +66,12 @@ class UserController extends Controller
         return redirect()->route('users.show');
     }
 
+
+    public function infomation($id)
+    {
+        $user = User::findOrFail($id);
+        $posts = Post::where('user_id', $id)->get();
+        return view('users.infomation', compact('user', 'posts'));
+    }
 
 }

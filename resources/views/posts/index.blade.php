@@ -14,9 +14,9 @@
         <div class="post-box">
             <div class="post-box-left">
             @if ($post->user->img_name)
-                <a href="#"><img src="{{ asset('storage/images/' . $post->user->img_name) }}"></a>
+                <a href="{{ route('users.infomation', ['id' => $post->user_id]) }}"><img src="{{ asset('storage/images/' . $post->user->img_name) }}"></a>
             @else
-                <a href="#"><img src="{{ asset('images/friend-match.png') }}"></a>
+                <a href="{{ route('users.infomation', ['id' => $post->user_id]) }}"><img src="{{ asset('images/friend-match.png') }}"></a>
             @endif
             </div>
             <div class="post-box-right">

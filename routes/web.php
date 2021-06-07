@@ -17,7 +17,7 @@ Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
     Route::get('show', 'UserController@show')->name('users.show');
     Route::get('edit', 'UserController@edit')->name('users.edit');
     Route::post('update', 'UserController@update')->name('users.update');
-});
+    Route::get('infomation/{id}', 'UserController@infomation')->name('users.infomation'); });
 
 //チャット処理
 Route::group(['prefix' => 'chat', 'middleware' => 'auth'], function () {

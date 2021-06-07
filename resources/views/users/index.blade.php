@@ -16,7 +16,7 @@
       @endif
       <h2 class="pageTitle">マッチングした人一覧</h2>
       <div class="matchingList">
-				@foreach( $matching_users as $user)
+        @foreach( $matching_users as $user)
           <div class="matchingPerson">
           <div class="matchingPerson_img"><img src="{{ asset('storage/images/' . $user->img_name) }}"></div>
             <div class="matchingPerson_name">{{ $user->name }}</div>

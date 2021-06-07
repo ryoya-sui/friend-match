@@ -17824,7 +17824,7 @@ body {
 }
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #F6F6F6;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -18004,7 +18004,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 }
 
 .top-wrapper {
-  background-color: #F6F6F6;
+  background-color: #fff;
   padding: 40px 0px;
   height: 100vh;
 }
