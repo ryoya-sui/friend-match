@@ -17871,6 +17871,10 @@ nav #Navber .navbar-nav .nav-item #post-link {
   padding-right: 1rem;
 }
 
+nav .pagination {
+  background-color: #FFFFFF;
+}
+
 .post-page-wrapper #title-input {
   height: 3rem;
 }

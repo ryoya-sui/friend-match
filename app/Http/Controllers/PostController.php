@@ -21,7 +21,7 @@ class PostController extends Controller
             $query->where('title', 'like', '%' . $key . '%')->orWhere('body', 'like', '%' . $key . '%');
         }
 
-        $posts = $query->orderBy('created_at', 'desc')->get();
+        $posts = $query->orderBy('created_at', 'desc')->paginate(10);
         return view('posts.index', compact('posts'));
     }
 

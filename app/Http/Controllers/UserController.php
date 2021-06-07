@@ -23,7 +23,7 @@ class UserController extends Controller
             $query->where('title', 'like', '%' . $key . '%')->orWhere('body', 'like', '%' . $key . '%');
         }
 
-        $posts = $query->orderBy('created_at', 'desc')->where('user_id', Auth::id())->get();
+        $posts = $query->orderBy('created_at', 'desc')->where('user_id', Auth::id())->paginate(10);
         $user = User::findOrFail(Auth::id());
         return view('users.show', compact('user', 'posts'));
     }
