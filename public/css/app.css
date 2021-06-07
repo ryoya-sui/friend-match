@@ -17324,6 +17324,13 @@ body {
   font-size: 30px;
 }
 
+.usershowPage .userInfo_tag {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  padding: 0.3rem;
+}
+
 .usershowPage .userInfo_selfIntroduction {
   margin-top: 30px;
   text-align: center;
@@ -17434,8 +17441,18 @@ body {
 
 #tinderslide ul > li .userName {
   position: absolute;
+  justify-content: center;
+  display: flex;
   bottom: 5px;
   color: #000;
+}
+
+#tinderslide ul > li .item-tags .item-tag {
+  background-color: aqua;
+  display: inline-flex;
+  padding: 0.3rem;
+  margin-left: 5px;
+  color: #666;
 }
 
 #tinderslide ul > li img {

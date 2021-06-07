@@ -64,6 +64,10 @@
           <label class="form-check-label" for="inlineRadio2">女</label>
         </div>
       </div>
+      <div class="form-group" >
+        <label>学習中のカテゴリー</label>
+        <input type="text" name="category" class="form-control" placeholder="プログラミング" value="{{ old('category') }}">
+      </div>
       <div class="form-group @error('self_introduction')has-error @enderror">
         <label>自己紹介文</label>
         <textarea class="form-control" name="self_introduction" rows="10">{{ old("self_introduction") }}</textarea>

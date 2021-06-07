@@ -15,8 +15,22 @@
       <div class='userInfo_img'>
       <img src="{{ asset('storage/images/' . $user->img_name) }}">
       </div>
-      <div class='userInfo_name'>{{ $user->name }}</div>
-      <div class='userInfo_selfIntroduction'>{{ $user->self_introduction }}</div>
+      <div class='userInfo_name'>
+       <div class='name_label'>ユーザー名</div>
+       <div class='name'>{{ $user->name }}</div>
+      </div>
+      <div class='userInfo_tag'>
+        <div class='tag_label'>学習中のカテゴリー</div>
+        @if (empty($user->category))
+        <div class='tag'>未設定</div>
+        @else
+        <div class='tag'>{{ $user->category }}</div>
+        @endif
+      </div>
+      <div class='userInfo_selfIntroduction'>
+       <div class='selfIntroduction_label'>自己紹介</div>
+       <div class='selfIntroduction'>{{ $user->self_introduction }}</div>
+      </div>
     </div>
     <div class='userAction'>
       <div class="userAction_edit userAction_common">

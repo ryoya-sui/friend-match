@@ -15,14 +15,21 @@
     <ul>
         @foreach($users as $user)
         <li data-user_id="{{ $user->id }}">
-          <div class="userName">{{ $user->name }}</div>
           <img src="{{ asset('storage/images/' . $user->img_name) }}">
+          <div class="userName">
+            {{ $user->name }}
+            @if (!empty($user->category)) 
+            <div class="item-tags">
+                <div class="item-tag">プログラミング</div>
+            </div>
+            @endif
+          </div>
           <div class="like"></div>
           <div class="dislike"></div>
         </li>
         @endforeach
     </ul>
-    <div class="noUser">近くにお相手がいません。</div>
+    <div class="noUser">お相手が見つかりません</div>
   </div>
   <div class="actions" id="actionBtnArea">
       <a href="#" class="dislike"><i class="fas fa-times fa-2x"></i></a>

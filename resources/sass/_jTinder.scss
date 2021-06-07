@@ -51,8 +51,19 @@ html, body {
         -webkit-backface-visibility: hidden;
         .userName {
           position: absolute;
+          justify-content: center;
+          display: flex;
           bottom: 5px;
           color: #000;
+        }
+        .item-tags {
+            .item-tag {
+                background-color: aqua;
+                display: inline-flex;
+                padding: 0.3rem;
+                margin-left: 5px;
+                color: #666;
+            }
         }
         img {
           position: absolute;
