@@ -3,6 +3,15 @@
 @section('content')
 
 <div class="topPage">
+  <div class="user-search-form col-md-6">
+    <form class="form-inline" action="{{ route('home') }}">
+        <div class="form-group">
+            <label>学習中カテゴリー・自己紹介文のキーワードで検索する:</label>
+            <input type="text" name="key"  class="form-control" placeholder="キーワードを入力">
+        </div>
+      <input type="submit" value="検索" class="btn btn-info">
+    </form>
+  </div>
   <div class="nav">
     <ul>
       <li class="personIcon">

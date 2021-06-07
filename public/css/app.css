@@ -17392,6 +17392,10 @@ body {
   position: relative;
 }
 
+.user-search-form {
+  margin: 30px auto;
+}
+
 /* Wrapper with padding */
 
 .wrap {

@@ -23,9 +23,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::where('id', '!=', Auth::id())->get();
+        $query = User::query();
+        $key = $request->key;
+        
+        if (!empty($key)) {
+            $query->where('category', 'like', '%' . $key . '%')->orWhere('self_introduction', 'like', '%' . $key . '%');
+        }
+
+        $users = $query->where('id', '!=', Auth::id())->get();
         $userCount = $users->count(); 
         $from_user_id = Auth::id();
         return view('home', compact('users', 'userCount', 'from_user_id'));
