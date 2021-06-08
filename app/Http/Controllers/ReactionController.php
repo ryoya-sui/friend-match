@@ -7,7 +7,6 @@ use App\User;
 use App\Reaction;
 use App\Constants\Status;
 use Illuminate\Support\Facades\Auth;
-use Log;
 
 class ReactionController extends Controller
 {

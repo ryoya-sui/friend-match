@@ -3,7 +3,6 @@
 <form class="post-page-wrapper" action="{{ route('post.update') }}" method="post">
 @csrf
     <input type="hidden" class="form-control m-1" name="id" value="{{ $post->id }}">
-    <input type="text" class="form-control m-1" id="title-input" placeholder="タイトル" name="title" value="{{ $post->title }}">
     @if ($errors->first('title'))
         <div class="validation">{{ $errors->first('title') }}</div>
     @endif
