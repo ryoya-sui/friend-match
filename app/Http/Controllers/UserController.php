@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserInfoRequest;
+use Intervention\Image\Facades\Image;
 use App\User;
 use App\Post;
 

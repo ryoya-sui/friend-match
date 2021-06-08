@@ -13,7 +13,6 @@ class ReactionController extends Controller
 {
     public function create(Request $request)
     {
-        Log::debug($request);
 
         $to_user_id = $request->to_user_id;
         $like_status = $request->reaction;
