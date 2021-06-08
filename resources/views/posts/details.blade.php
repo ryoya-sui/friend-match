@@ -4,6 +4,9 @@
     <div class="item-wrapper">
         <div class="item-header">
             <div class="date">{{ $post->created_at }}</div>
+            @if (Auth::id() == $post->user_id)
+            <button type="button" class="btn btn-success" onclick="location.href='{{ route('post.edit', ['id' => $post->id]) }}'">編集する</button>
+            @endif
         </div>
         <div class="item-title">{{ $post->title }}</div>
         <div class="item-tags">

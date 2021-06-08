@@ -48,7 +48,7 @@ class PostController extends Controller
             'body' => $request->body
         ]);
 
-        $msg = "投稿しました。どんどんアウトプットしましょう";
+        $msg = '投稿しました。どんどんアウトプットしましょう';
         return redirect()->route('post.details', ['id' => $post->id])->with('flash_message', $msg);
     }
 
@@ -57,5 +57,43 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
         return view('posts.details', compact('post'));
+    }
+
+    //投稿の編集ページ
+    public function edit($id)
+    {
+        $post = Post::where('id', $id)->where('user_id', Auth::id())->first();
+        
+        if (empty($post)) {
+            return back();
+        }
+
+        return view('posts.edit_form', compact('post'));
+    }
+
+    //投稿の編集
+    public function update(CreatePostRequest $request)
+    {
+        $post = Post::where('id', $request->id)->where('user_id', Auth::id())->first();
+
+        if (empty($post)) {
+            return back();
+        }
+
+        $tags = explode(' ', $request->tags);
+        $tag1 = $tags[0];
+        $tag2 = (isset($tags[1])) ? $tags[1] : null;
+        $tag3 = (isset($tags[2])) ? $tags[2] : null;
+
+        $post->title = $request->title;
+        $post->tag1 = $tag1;
+        $post->tag2 = $tag2;
+        $post->tag3 = $tag3;
+        $post->body = $request->body;
+        $post->save();
+
+        $msg = '記事の内容を編集しました。';
+        return redirect()->route('post.details', ['id' => $post->id])->with('flash_message', $msg);
+
     }
 }

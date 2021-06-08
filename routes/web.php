@@ -54,5 +54,7 @@ Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function () {
     Route::get('form', 'PostController@form')->name('post.form'); //投稿画面
     Route::post('create', 'PostController@create')->name('post.create'); //投稿処理
     Route::get('details/{id}', 'PostController@details')->name('post.details'); //投稿の個別ページ
+    Route::get('edit/{id}', 'PostController@edit')->name('post.edit'); //投稿編集フォーム
+    Route::post('update', 'PostController@update')->name('post.update'); //投稿編集事項
 });
 
