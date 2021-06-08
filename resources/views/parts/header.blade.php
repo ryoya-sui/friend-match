@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light pl-5 pr-5 pt-2 pb-2">
-  <a class="navbar-brand text-white" href="#">friendmatch</a>
+  <a class="navbar-brand text-white" href="#">FRIEND MATCH</a>
   <div class="collapse navbar-collapse" id="Navber">
     <ul class="navbar-nav">
       @auth
