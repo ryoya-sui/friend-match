@@ -1,5 +1,5 @@
 # FRIEND MATCH
-### 🌐 App URL **https://cupramen-timer.firebaseapp.com**
+### 🌐 App URL **https://koa-aiken.com/matching/friend-match/public/**
 **※テストユーザー情報ログイン画面にて記載**
 <br>
 ![スクリーンショット 2021-06-08 15 37 57](https://user-images.githubusercontent.com/67609175/121191565-0c83f400-c8a7-11eb-95ab-e4153247b40b.png)
