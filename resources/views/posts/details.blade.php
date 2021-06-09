@@ -6,6 +6,11 @@
             <div class="date">{{ $post->created_at }}</div>
             @if (Auth::id() == $post->user_id)
             <button type="button" class="btn btn-success" onclick="location.href='{{ route('post.edit', ['id' => $post->id]) }}'">編集する</button>
+            <form action="{{ route('post.delete') }}" method="POST">
+            {{ csrf_field() }}
+            <input type="hidden" value="{{ $post->id }}" name="id">
+            <input type="submit" value="削除する" class="btn btn-danger" onclick="return confirm('投稿を削除しますか？')">
+            </form>
             @endif
         </div>
         <div class="item-title">{{ $post->title }}</div>

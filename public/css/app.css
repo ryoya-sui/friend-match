@@ -17981,8 +17981,8 @@ nav .pagination {
   color: gray;
 }
 
-.item-page-wrapper .item-wrapper .item-header .edit_button {
-  display: inline-block;
+.item-page-wrapper .item-wrapper .item-header .btn {
+  display: flex;
 }
 
 .item-page-wrapper .item-wrapper .item-title {

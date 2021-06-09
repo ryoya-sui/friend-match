@@ -94,6 +94,20 @@ class PostController extends Controller
 
         $msg = '記事の内容を編集しました。';
         return redirect()->route('post.details', ['id' => $post->id])->with('flash_message', $msg);
-
     }
+
+    //投稿の削除
+    public function delete(Request $request)
+    {
+        $post = Post::where('id', $request->id)->where('user_id', Auth::id())->first();
+
+        if (empty($post)) {
+            return back();
+        }
+
+        $post->delete();
+        $msg = '投稿を削除しました';
+        return redirect()->route('post.index')->with('flash_message', $msg);
+    }
+
 }

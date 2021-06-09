@@ -5,5 +5,4 @@
     $(function(){
         $('.flash_message').fadeOut(10000);
     });
-
-})();
+});

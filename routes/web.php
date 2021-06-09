@@ -56,5 +56,6 @@ Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function () {
     Route::get('details/{id}', 'PostController@details')->name('post.details'); //投稿の個別ページ
     Route::get('edit/{id}', 'PostController@edit')->name('post.edit'); //投稿編集フォーム
     Route::post('update', 'PostController@update')->name('post.update'); //投稿編集事項
+    Route::post('delete', 'PostController@delete')->name('post.delete'); //投稿の削除
 });
 
